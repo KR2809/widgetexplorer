@@ -1,0 +1,15 @@
+npm warn Unknown env config "python". This will stop working in the next major version of npm.
+
+> exploration-app@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.33
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 1996ms
+ ○ Compiling / ...
+ ✓ Compiled / in 5.8s (1068 modules)
+ GET / 200 in 6269ms
+ ✓ Compiled in 762ms (541 modules)
+[?25h
