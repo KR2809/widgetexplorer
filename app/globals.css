@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  /* Premium Travel Color Palette */
+  --color-primary: #1a4d2e;
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #8b7355;
+  --color-secondary-foreground: #ffffff;
+
+  --color-accent: #d4a574;
+  --color-accent-foreground: #1a1a1a;
+
+  --color-muted: #f5f1ed;
+  --color-muted-foreground: #6b6b6b;
+
+  --color-background: #ffffff;
+  --color-foreground: #1a1a1a;
+
+  --color-card: #ffffff;
+  --color-card-foreground: #1a1a1a;
+
+  --color-popover: #ffffff;
+  --color-popover-foreground: #1a1a1a;
+
+  --color-border: #e5e5e5;
+  --color-input: #e5e5e5;
+  --color-ring: #1a4d2e;
+
+  --color-destructive: #dc2626;
+  --color-destructive-foreground: #ffffff;
+
+  /* Typography */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-playfair);
+
+  /* Radius */
+  --radius-sm: 0.25rem;
+  --radius: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-background: #0a0a0a;
+    --color-foreground: #ededed;
+
+    --color-card: #1a1a1a;
+    --color-card-foreground: #ededed;
+
+    --color-popover: #1a1a1a;
+    --color-popover-foreground: #ededed;
+
+    --color-muted: #262626;
+    --color-muted-foreground: #a3a3a3;
+
+    --color-border: #333333;
+    --color-input: #333333;
+
+    --color-primary: #2d6a4f;
+    --color-secondary: #a88968;
+    --color-accent: #e6c08e;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
